@@ -1,0 +1,18 @@
+# macOS / Windows 通用
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 不要把本地工作文件传上去
+*.ps1
+*.py
+*.md
+!README.md
+
+# 本地调试产物
+_site_opt/
+site_opt/
+node_modules/
