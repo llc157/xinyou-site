@@ -1,0 +1,20 @@
+/*
+ * Cloudflare Pages 缓存与安全响应头
+ * 作用：静态资源长缓存提速 + 强制 HTTPS + 基础安全头
+ */
+
+# HTML 不缓存，保证每次改动立刻生效
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# 图片长缓存（文件名带版本号，可长期缓存）
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 通用安全头
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+*/
