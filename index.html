@@ -10,23 +10,170 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "成都高新心佑云端医疗美容诊所有限公司",
-  "alternateName": "心佑·云端",
-  "description": "经成都高新区卫健局备案的医疗美容诊所，设美容外科、美容皮肤科，营业面积1000余平方米，位于成都高新区仁和新城。",
-  "foundingDate": "2018-10-25",
-  "telephone": "19180811520",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "中国（四川）自由贸易试验区成都高新区府城大道西段505号1幢1单元24层2408号",
-    "addressLocality": "成都市",
-    "addressRegion": "四川省",
-    "addressCountry": "CN"
-  },
-  "medicalSpecialty": ["PlasticSurgery", "Dermatology"],
-  "availableService": [
-    {"@type": "MedicalProcedure", "name": "美容外科"},
-    {"@type": "MedicalProcedure", "name": "美容皮肤科"}
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://xinyouyunduan.cn/#clinic",
+      "name": "成都高新心佑云端医疗美容诊所有限公司",
+      "alternateName": "心佑·云端",
+      "legalName": "成都高新心佑云端医疗美容诊所有限公司",
+      "description": "经成都高新区卫健局备案的医疗美容诊所，成立于2018年，设美容外科、美容皮肤科，营业面积1000余平方米，位于成都高新区仁和新城（府城大道西段505号）。提供一对一私人订制诊疗路径。",
+      "url": "https://xinyouyunduan.cn/",
+      "logo": "https://xinyouyunduan.cn/",
+      "telephone": "+86-191-8081-1520",
+      "foundingDate": "2018-10-25",
+      "email": null,
+      "priceRange": "$$",
+      "currenciesAccepted": "CNY",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "府城大道西段505号1幢1单元24层2408号",
+        "addressLocality": "成都市",
+        "addressRegion": "四川省",
+        "postalCode": "610000",
+        "addressCountry": "CN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "CN",
+        "addressRegion": "四川省",
+        "addressLocality": "成都市高新区"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "成都市"
+      },
+      "medicalSpecialty": ["PlasticSurgery", "Dermatology"],
+      "availableService": [
+        {"@type": "MedicalProcedure", "name": "美容外科"},
+        {"@type": "MedicalProcedure", "name": "美容皮肤科"},
+        {"@type": "MedicalProcedure", "name": "皮肤美容"},
+        {"@type": "MedicalProcedure", "name": "整形美容"},
+        {"@type": "MedicalProcedure", "name": "细胞抗衰管理"},
+        {"@type": "MedicalProcedure", "name": "私密养护"},
+        {"@type": "MedicalProcedure", "name": "原生态健康管理"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "诊疗科目与项目一览",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "美容外科",
+            "itemListElement": [
+              {"@type": "MedicalProcedure", "name": "OG线精雕"},
+              {"@type": "MedicalProcedure", "name": "皮贴骨"},
+              {"@type": "MedicalProcedure", "name": "筋膜折叠无痕提升"},
+              {"@type": "MedicalProcedure", "name": "ST筋膜再植"},
+              {"@type": "MedicalProcedure", "name": "骨相精雕"},
+              {"@type": "MedicalProcedure", "name": "内外轮廓固定"},
+              {"@type": "MedicalProcedure", "name": "鼻综合整形"},
+              {"@type": "MedicalProcedure", "name": "重睑成形"},
+              {"@type": "MedicalProcedure", "name": "重睑修复"},
+              {"@type": "MedicalProcedure", "name": "下睑袋矫正"},
+              {"@type": "MedicalProcedure", "name": "眉提升"},
+              {"@type": "MedicalProcedure", "name": "隆颏"},
+              {"@type": "MedicalProcedure", "name": "微笑吸脂"}
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "美容皮肤科 · 抗衰",
+            "itemListElement": [
+              {"@type": "MedicalProcedure", "name": "童颜肌底"},
+              {"@type": "MedicalProcedure", "name": "TV骨胶原"},
+              {"@type": "MedicalProcedure", "name": "精准抗衰"},
+              {"@type": "MedicalProcedure", "name": "皮肤美容"},
+              {"@type": "MedicalProcedure", "name": "注射类项目"},
+              {"@type": "MedicalProcedure", "name": "皮肤检测评估"},
+              {"@type": "MedicalProcedure", "name": "红蓝光修复"},
+              {"@type": "MedicalProcedure", "name": "医学护肤管理"}
+            ]
+          }
+        ]
+      },
+      "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "一对一私人订制诊疗路径（术前安全评估、术中规范操作、术后护理跟进）"}}
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "医疗机构备案",
+        "recognizedBy": {
+          "@type": "GovernmentOrganization",
+          "name": "成都高新区卫生健康局"
+        },
+        "identifier": "MA68J998651010915D2212"
+      },
+      "isAcceptingNewPatients": true,
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "sameAs": []
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://xinyouyunduan.cn/#org",
+      "name": "成都高新心佑云端医疗美容诊所有限公司",
+      "alternateName": "心佑·云端",
+      "url": "https://xinyouyunduan.cn/",
+      "logo": "https://xinyouyunduan.cn/",
+      "foundingDate": "2018-10-25",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "府城大道西段505号1幢1单元24层2408号",
+        "addressLocality": "成都市",
+        "addressRegion": "四川省",
+        "addressCountry": "CN"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+86-191-8081-1520",
+        "contactType": "customer service",
+        "areaServed": "CN",
+        "availableLanguage": ["zh-CN"]
+      }]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://xinyouyunduan.cn/#website",
+      "url": "https://xinyouyunduan.cn/",
+      "name": "成都高新心佑云端医疗美容诊所 · 官方网站",
+      "inLanguage": "zh-CN",
+      "publisher": {"@id": "https://xinyouyunduan.cn/#org"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://xinyouyunduan.cn/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何查询一家医疗美容机构是否正规备案？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "正规医疗美容机构应经所在地卫生健康主管部门备案或审批，并公示诊疗科目。查询途径包括机构所在地卫健部门官网的备案公示栏目、机构内悬挂的备案凭证，以及「医疗机构执业登记」相关公示平台。备案信息中的机构名称、地址、诊疗科目应当与现场一致，不一致时应提高警惕。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "面诊前建议先准备哪几件事？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一是核验机构资质与诊疗科目是否覆盖你想咨询的项目类别；二是了解主诊医师的执业资质；三是请医师当面评估并说明方案、耗材来源与恢复安排，保留书面或电子记录；四是对报价明显偏离院内公示的渠道保持审慎，价格以院内公示为准。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么注射类项目要关注正品渠道？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "注射类产品属于医疗器械或药品管理范畴，正规机构应从品牌方授权渠道采购，产品包装带有防伪编码并支持官方验真。就诊时可以要求查看产品外包装并现场验真；拒绝来源不明、无法提供验真途径的产品，是对自身安全负责的基本动作。"
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -291,7 +438,7 @@
     <div class="acad-grid">
       <figure class="reveal"><img src="xinyou-site/img/xy-img-26.jpg" alt="皮肤检测仪面诊场景"></figure>
       <figure class="reveal"><img src="xinyou-site/img/xy-img-31.jpg" alt="团队合影"></figure>
-      <figure class="reveal"><img src="xinyou-site/img/xy-img-05.jpg" alt="行业会议现场记录"></figure>
+      <figure class="reveal"><img src="xinyou-site/img/xy-img-58.jpg" alt="乔雅登骨相美学发布会现场"></figure>
     </div>
   </div>
 </section>
