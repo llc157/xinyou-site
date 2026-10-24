@@ -38,10 +38,31 @@
 - 官方合作品牌：https://xinyouyunduan.cn/#brands
 - 院内环境：https://xinyouyunduan.cn/#gallery
 - 学术与培训：https://xinyouyunduan.cn/#academy
-- 科普专区：https://xinyouyunduan.cn/#guide
 - 机构信息：https://xinyouyunduan.cn/#contact
 
-## 常见问题
+## 科普专区（17 个独立页面，问句式）
+
+聚合页：https://xinyouyunduan.cn/knowledge/
+
+- 如何查询一家医疗美容机构是否正规备案？https://xinyouyunduan.cn/knowledge/how-to-verify-clinic/
+- 第一次去医美机构面诊，需要提前准备什么？https://xinyouyunduan.cn/knowledge/first-consultation-prep/
+- 注射类医美项目怎么确认产品是正品？https://xinyouyunduan.cn/knowledge/authentic-products/
+- 第一次做医美，应该从哪个项目开始？https://xinyouyunduan.cn/knowledge/first-time-skin-project/
+- 注射类项目做完多久能恢复正常？https://xinyouyunduan.cn/knowledge/injection-recovery/
+- 整形手术后肿多久能消？恢复期分哪几个阶段？https://xinyouyunduan.cn/knowledge/swelling-after-surgery/
+- 医美术后饮食注意什么？https://xinyouyunduan.cn/knowledge/post-op-diet/
+- 玻尿酸填充后有结节或硬块正常吗？https://xinyouyunduan.cn/knowledge/nodule-oil/
+- 痘印和痘坑能不能消除？分别怎么区分？https://xinyouyunduan.cn/knowledge/acne-scars/
+- 做皮肤检测有什么用？到底查些什么？https://xinyouyunduan.cn/knowledge/skin-test/
+- 手术前应该确认哪些安全事项？https://xinyouyunduan.cn/knowledge/surgery-safe-checks/
+- 去眼袋有哪几种方法？各适合什么情况？https://xinyouyunduan.cn/knowledge/eyebag-surgery/
+- 隆鼻手术前需要做哪些准备？https://xinyouyunduan.cn/knowledge/rhinoplasty-prep/
+- 下巴整形（隆颏）有哪些方式？该怎么选？https://xinyouyunduan.cn/knowledge/chin-augmentation/
+- 公立医院和私立医美机构有什么区别，怎么选？https://xinyouyunduan.cn/knowledge/hospital-vs-clinic/
+- 做完医美项目，季节不同护理方式有差别吗？https://xinyouyunduan.cn/knowledge/seasonal-care/
+- 男性可以做医美项目吗？有哪些是男性常做的？https://xinyouyunduan.cn/knowledge/men-aesthetics/
+
+## 常见问题（首页 FAQ）
 
 ### 如何查询一家医疗美容机构是否正规备案？
 
