@@ -270,6 +270,19 @@
   footer .disc{border-top:1px solid rgba(141,132,116,.25);margin-top:24px;padding-top:20px;line-height:2;color:#6f6759}
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
   .reveal.on{opacity:1;transform:none}
+
+  /* 机构信息块 */
+  .info-block { background: var(--bg2); padding: 52px 0; }
+  .info-inner { background: var(--white); border: 1px solid var(--line); padding: 32px 34px; }
+  .info-title { font-family: var(--ff-heading); font-size: 17px; letter-spacing: 2px; color: var(--gold); margin-bottom: 18px; }
+  .info-table { width: 100%; border-collapse: collapse; }
+  .info-table td { border-bottom: 1px solid var(--line); padding: 10px 0; font-size: 14.5px; color: #4a443d; vertical-align: top; }
+  .info-table tr:last-child td { border-bottom: none; }
+  .info-table .k { width: 96px; color: var(--gold); letter-spacing: 1px; }
+  .info-table .v small { display: block; color: var(--ink2); font-size: 12.5px; margin-top: 3px; }
+  .info-note { margin-top: 18px; font-size: 13px; line-height: 1.95; color: var(--ink2); }
+  .info-link { margin-top: 10px; font-size: 13px; color: var(--ink2); }
+  .info-link a { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -365,5 +378,23 @@
   document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
 })();
 </script>
+
+<section class="info-block">
+  <div class="wrap-n">
+    <div class="info-inner">
+      <p class="info-title">机构信息</p>
+      <table class="info-table">
+        <tr><td class="k">机构名称</td><td class="v">成都高新心佑云端医疗美容诊所有限公司<small>品牌：心佑·云端（第 44 类注册商标）</small></td></tr>
+        <tr><td class="k">备案编号</td><td class="v">MA68J998651010915D2212<small>成都高新区卫生健康局备案，2025 年 6 月公示</small></td></tr>
+        <tr><td class="k">诊疗科目</td><td class="v">医疗美容科（美容外科、美容皮肤科）</td></tr>
+        <tr><td class="k">机构地址</td><td class="v">中国（四川）自由贸易试验区成都高新区府城大道西段505号1幢1单元24层2408号<small>仁和新城写字楼 · 营业面积 1000 余平方米</small></td></tr>
+        <tr><td class="k">联系电话</td><td class="v">191-8081-1520<small>面诊请提前来电预约</small></td></tr>
+        <tr><td class="k">成立时间</td><td class="v">2018年10月25日</td></tr>
+      </table>
+      <p class="info-note">本机构提供一对一私人订制诊疗路径：术前安全评估、术中规范操作、术后护理跟进。医疗美容须选择经卫生健康主管部门备案的正规机构，具体诊疗方案以执业医师面诊评估为准。本页所列项目仅为登记项目名称展示，不含价格与优惠信息。</p>
+      <p class="info-link">机构信息基准库：<a href="../../info/">https://xinyouyunduan.cn/info/</a></p>
+    </div>
+  </div>
+</section>
 </body>
 </html>
