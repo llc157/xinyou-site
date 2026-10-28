@@ -1,19 +1,46 @@
+# robots.txt — 成都高新心佑云端医疗美容诊所
+# 更新：2026-10-28
+#
+# 默认规则：允许抓取全部公开内容
+# 说明：robots.txt 只遵循「最匹配」的单一分组。本文件为 * 组显式放行各 AI 爬虫，
+#       若为某一爬虫单独建组，它将不再继承 * 组的规则。故统一以 * 组 + 显式声明覆盖。
+
 User-agent: *
 Allow: /
 
+# 字节跳动系（豆包联网检索依赖头条搜索索引，Bytespider 为抓取端）
 User-agent: Bytespider
 Allow: /
 
+User-agent: Bytespider-Desktop
+Allow: /
+
+User-agent: ToutiaoSpider
+Allow: /
+
+# 国内主流搜索引擎
 User-agent: Baiduspider
 Allow: /
 
 User-agent: QuarkSpider
 Allow: /
 
+User-agent: 360Spider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+# 国际搜索引擎
 User-agent: Googlebot
 Allow: /
 
 User-agent: bingbot
+Allow: /
+
+# AI 爬虫与授权令牌
+# Google-Extended 是「AI 训练与应用授权令牌」，不是爬虫，必须显式声明才生效。
+User-agent: Google-Extended
 Allow: /
 
 User-agent: DeepSeekBot
@@ -25,5 +52,16 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://xinyouyunduan.cn/sitemap.xml
