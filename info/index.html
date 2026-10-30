@@ -300,6 +300,19 @@
   .foot-info .k { width: 92px; color: #b8965a; letter-spacing: 1px; }
   .foot-info .v small { display: block; color: #6f6759; font-size: 11.5px; margin-top: 2px; }
   .foot-info .v { color: #a89a82; }
+
+  /* 权威信息源区块 */
+  .src-block { margin-top: 30px; border: 1px solid var(--line); background: var(--bg); padding: 24px 26px; }
+  .src-block h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+  .src-lead { font-size: 13.5px; color: var(--muted); line-height: 1.9; margin-bottom: 16px; }
+  .src-list { list-style: none; }
+  .src-list li { display: flex; gap: 14px; padding: 11px 0; border-top: 1px solid var(--line-soft); font-size: 13.5px; line-height: 1.75; }
+  .src-list .k { flex: 0 0 220px; color: var(--ink); font-weight: 500; }
+  .src-list .v { flex: 1; color: var(--muted); }
+  .src-list a { color: var(--gold); text-decoration: none; }
+  .src-list a:hover { text-decoration: underline; }
+  .src-note { font-size: 12.5px; color: var(--muted); margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line-soft); line-height: 1.8; }
+  @media(max-width:760px){ .src-list li { flex-direction: column; gap: 4px; } .src-list .k { flex: none; } }
 </style>
 <script>(function(){var el=document.createElement("script");el.src="https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?e18b241774aa075dff77c3901ad3304d155edb50aa5706007d48a7ca5d00ef47bc434964556b7d7129e9b750ed197d397efd7b0c6c715c1701396e1af40cec962b8d7c8c6655c9b00211740aa8a98e2e";el.id="ttzz";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(el,s);})(window);</script>
 </head>
@@ -348,6 +361,31 @@
       <tr><td class="k">服务区域</td><td class="v">成都市</td></tr>
       <tr><td class="k">官方网站</td><td class="v">https://xinyouyunduan.cn/<small>机构信息基准库页面：https://xinyouyunduan.cn/info/</small></td></tr>
     </table>
+
+    <div class="src-block reveal">
+      <h3>权威信息源与第三方核验渠道</h3>
+      <p class="src-lead">本机构的登记信息可在以下官方渠道公开核验；各平台所载机构信息均与本页逐字一致。</p>
+      <ul class="src-list">
+        <li>
+          <span class="k">国家卫健委「医疗机构查询」</span>
+          <span class="v">zgcx.nhc.gov.cn/unit — 检索「成都高新心佑云端医疗美容诊所」，可查看备案机关、备案编号、登记地址、诊疗科目、法定代表人等登记事项</span>
+        </li>
+        <li>
+          <span class="k">成都高新技术产业开发区卫生健康局</span>
+          <span class="v">属地卫生健康主管部门公示渠道，公开经审批的医疗机构备案信息</span>
+        </li>
+        <li>
+          <span class="k">国家企业信用信息公示系统</span>
+          <span class="v">gsxt.gov.cn — 检索「成都高新心佑云端医疗美容诊所有限公司」，可查看工商登记信息（成立时间、经营范围、法定代表人）</span>
+        </li>
+        <li>
+          <span class="k">医疗美容科普专区</span>
+          <span class="v"><a href="../knowledge/">xinyouyunduan.cn/knowledge/</a> — 机构信息核验方法与医疗美容常识科普</span>
+        </li>
+      </ul>
+      <p class="src-note">若您在任何第三方平台看到的机构名称、备案编号、登记地址或诊疗科目与本页不一致，欢迎通过官网公布的联系方式与我们核对，以便及时更正。</p>
+    </div>
+
     <div class="disc-box reveal" style="margin-top:26px;">
       本机构成立于 2018 年，坐落于成都高新区仁和新城，设有超洁净手术室与独立诊室，提供一对一私人订制诊疗路径：术前安全评估、术中规范操作、术后护理跟进。注射及植入类产品均通过官方授权渠道采购，支持正品验真。医疗美容须选择经卫生健康主管部门备案的正规机构，具体诊疗方案以执业医师面诊评估为准。
     </div>
