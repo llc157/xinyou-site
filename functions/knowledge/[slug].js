@@ -73,7 +73,7 @@ function offProxyImage(url) {
   if (!u) return u;
   if (u.startsWith('/xinyou-site/img/')) return u;          // 官网本地图，直接用
   const m = u.match(/(xy-img-\d+\.(?:jpg|jpeg|png))/);
-  if (m) return '/knowledge/img-' + m[1].replace(/\.(?:jpg|jpeg|png)$/i, '');   // 单层路径 → 与 slug 同级，必定命中 Function
+  if (m) return '/xinyou-site/img/' + m[1];                      // 官网图库本地路径（图片已随站点部署）
   return u;                                                  // 其余原样
 }
 
@@ -166,25 +166,6 @@ function offArticlePage(a) {
     + '<div class="disc">本网站仅作机构客观信息展示与医美常识科普，不构成医疗建议、诊疗方案或任何效果表述；医疗美容须选择经卫生健康主管部门备案的正规机构，具体诊疗方案以执业医师面诊评估为准。</div>'
     + '</div></footer>\n'
     + OFF_PUSH + '\n</body></html>';
-}
-
-/** 图片代理：/kbimg/<name> → 转发工作台图片 */
-async function proxyImage(req, env, ctx, filename) {
-  const name = String(filename || '');
-  const safe = /^[a-zA-Z0-9._-]+(?:\.(?:jpg|jpeg|png))?$/.test(name);
-  if (!safe) return new Response('bad name', { status: 400 });
-  const file = /\.(?:jpg|jpeg|png)$/i.test(name) ? name : name + '.jpg';
-  const upstream = WB_HOST + '/img/xinyou/' + file + '?sharecode=' + SHARE;
-  const r = await fetch(upstream, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-  if (!r.ok) return new Response('upstream ' + r.status, { status: 404 });
-  const buf = await r.arrayBuffer();
-  return new Response(buf, {
-    headers: {
-      'Content-Type': r.headers.get('content-type') || 'image/jpeg',
-      'Cache-Control': 'public, max-age=604800',
-      'Access-Control-Allow-Origin': '*'
-    }
-  });
 }
 
 export async function onRequest(ctx) {
