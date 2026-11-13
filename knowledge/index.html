@@ -476,6 +476,18 @@
   </div>
 </section>
 
+
+<!-- v1027d：工作台发布的最新科普文章（动态加载，more.json 由构建脚本生成） -->
+<section id="dyn-sec" style="display:none;padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="en">Latest</div>
+      <h2>最新发布</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="card-grid" id="dyn-grid"></div>
+  </div>
+</section>
 <section class="contact-sec">
   <div class="wrap">
     <div class="contact-card reveal">
@@ -528,5 +540,20 @@
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  fetch("more.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){
+    if(!j||!j.ok||!j.articles||!j.articles.length) return;
+    var grid=document.getElementById("dyn-grid"), sec=document.getElementById("dyn-sec");
+    j.articles.forEach(function(a){
+      var d=document.createElement("a"); d.className="card reveal on"; d.href="/knowledge/"+a.slug+"/";
+      d.innerHTML='<div class="no">NEW · '+(a.published_at||"").slice(0,10)+'</div><h3></h3><div class="more">阅读全文 →</div>';
+      d.querySelector("h3").textContent=a.title; grid.appendChild(d);
+    });
+    sec.style.display="";
+  }).catch(function(){});
+})();
+</script>
 </body>
 </html>
