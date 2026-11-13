@@ -73,7 +73,7 @@ function offProxyImage(url) {
   if (!u) return u;
   if (u.startsWith('/xinyou-site/img/')) return u;          // 官网本地图，直接用
   const m = u.match(/(xy-img-\d+\.(?:jpg|jpeg|png))/);
-  if (m) return '/knowledge/_img/' + m[1].replace(/\.(?:jpg|jpeg|png)$/i, ''); // 无扩展名 → 才会走 Function（带 .jpg 会被当静态文件→SPA fallback）
+  if (m) return '/knowledge/kbimg/' + m[1].replace(/\.(?:jpg|jpeg|png)$/i, ''); // 无扩展名 → 才会走 Function（带 .jpg 会被当静态文件→SPA fallback）
   return u;                                                  // 其余原样
 }
 
@@ -192,8 +192,8 @@ export async function onRequest(ctx) {
   const url = new URL(request.url);
 
   // 图片代理：/knowledge/_img/<name-without-ext>
-  if (url.pathname.startsWith('/knowledge/_img/')) {
-    return proxyImage(request, env, ctx, url.pathname.slice('/knowledge/_img/'.length));
+  if (url.pathname.startsWith('/knowledge/kbimg/')) {
+    return proxyImage(request, env, ctx, url.pathname.slice('/knowledge/kbimg/'.length));
   }
 
   // 文章页：/knowledge/<slug>/
