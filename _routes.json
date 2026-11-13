@@ -1,8 +1,7 @@
 {
   "version": 1,
   "include": [
-    "/knowledge/*",
-    "/kbimg/*"
+    "/knowledge/*"
   ],
   "exclude": [
     "/knowledge/index.html",
