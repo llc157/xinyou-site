@@ -73,7 +73,7 @@ function offProxyImage(url) {
   if (!u) return u;
   if (u.startsWith('/xinyou-site/img/')) return u;          // 官网本地图，直接用
   const m = u.match(/(xy-img-\d+\.(?:jpg|jpeg|png))/);
-  if (m) return '/knowledge/kbimg/' + m[1].replace(/\.(?:jpg|jpeg|png)$/i, ''); // 无扩展名 → 才会走 Function（带 .jpg 会被当静态文件→SPA fallback）
+  if (m) return '/knowledge/img-' + m[1].replace(/\.(?:jpg|jpeg|png)$/i, '');   // 单层路径 → 与 slug 同级，必定命中 Function
   return u;                                                  // 其余原样
 }
 
