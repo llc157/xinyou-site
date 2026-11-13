@@ -73,7 +73,7 @@ function offProxyImage(url) {
   if (!u) return u;
   if (u.startsWith('/xinyou-site/img/')) return u;          // 官网本地图，直接用
   const m = u.match(/(xy-img-\d+\.(?:jpg|jpeg|png))/);
-  if (m) return '/knowledge/_img/' + m[1];                      // 走本站代理（在 /knowledge/* 规则内）
+  if (m) return '/knowledge/_img/' + m[1].replace(/\.(?:jpg|jpeg|png)$/i, ''); // 无扩展名 → 才会走 Function（带 .jpg 会被当静态文件→SPA fallback）
   return u;                                                  // 其余原样
 }
 
@@ -170,9 +170,11 @@ function offArticlePage(a) {
 
 /** 图片代理：/kbimg/<name> → 转发工作台图片 */
 async function proxyImage(req, env, ctx, filename) {
-  const safe = /^[a-zA-Z0-9._-]+\.(jpg|jpeg|png)$/.test(filename || '');
+  const name = String(filename || '');
+  const safe = /^[a-zA-Z0-9._-]+(?:\.(?:jpg|jpeg|png))?$/.test(name);
   if (!safe) return new Response('bad name', { status: 400 });
-  const upstream = WB_HOST + '/img/xinyou/' + filename + '?sharecode=' + SHARE;
+  const file = /\.(?:jpg|jpeg|png)$/i.test(name) ? name : name + '.jpg';
+  const upstream = WB_HOST + '/img/xinyou/' + file + '?sharecode=' + SHARE;
   const r = await fetch(upstream, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!r.ok) return new Response('upstream ' + r.status, { status: 404 });
   const buf = await r.arrayBuffer();
@@ -189,7 +191,7 @@ export async function onRequest(ctx) {
   const { request, env, next } = ctx;
   const url = new URL(request.url);
 
-  // 图片代理：/knowledge/_img/<name>
+  // 图片代理：/knowledge/_img/<name-without-ext>
   if (url.pathname.startsWith('/knowledge/_img/')) {
     return proxyImage(request, env, ctx, url.pathname.slice('/knowledge/_img/'.length));
   }
