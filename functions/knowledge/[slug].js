@@ -73,7 +73,7 @@ function offProxyImage(url) {
   if (!u) return u;
   if (u.startsWith('/xinyou-site/img/')) return u;          // 官网本地图，直接用
   const m = u.match(/(xy-img-\d+\.(?:jpg|jpeg|png))/);
-  if (m) return '/kbimg/' + m[1];                            // 走本站代理
+  if (m) return '/knowledge/_img/' + m[1];                      // 走本站代理（在 /knowledge/* 规则内）
   return u;                                                  // 其余原样
 }
 
@@ -189,9 +189,9 @@ export async function onRequest(ctx) {
   const { request, env, next } = ctx;
   const url = new URL(request.url);
 
-  // 图片代理
-  if (url.pathname.startsWith('/kbimg/')) {
-    return proxyImage(request, env, ctx, url.pathname.slice('/kbimg/'.length));
+  // 图片代理：/knowledge/_img/<name>
+  if (url.pathname.startsWith('/knowledge/_img/')) {
+    return proxyImage(request, env, ctx, url.pathname.slice('/knowledge/_img/'.length));
   }
 
   // 文章页：/knowledge/<slug>/
