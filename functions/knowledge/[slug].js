@@ -73,7 +73,7 @@ function offProxyImage(url) {
   if (!u) return u;
   if (u.startsWith('/xinyou-site/img/')) return u;          // 官网本地图，直接用
   const m = u.match(/(xy-img-\d+\.(?:jpg|jpeg|png))/);
-  if (m) return '/xinyou-site/img/' + m[1];                      // 官网图库本地路径（图片已随站点部署）
+  if (m) return '/knowledge/_img/' + m[1];                         // 静态图片目录（图片已随站点部署）
   return u;                                                  // 其余原样
 }
 
