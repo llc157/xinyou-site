@@ -1,3 +1,9 @@
+/*
+ * Cloudflare Pages 缓存与安全响应头
+ * 作用：静态资源长缓存提速 + 基础安全头
+ * 注意：规则块必须用 /* 开头、*/ 结尾，此文件语法错误会导致 Content-Type 错乱
+ */
+
 /index.html
   Cache-Control: no-cache, no-store, must-revalidate
 
